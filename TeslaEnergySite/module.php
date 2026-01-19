@@ -20,9 +20,6 @@ class TeslaEnergySite extends IPSModuleStrict
         $this->RegisterPropertyString('ESID', '');
         $this->RegisterPropertyInteger('UpdateInterval', 6);
 
-        //Connect to available splitter or create a new one
-        $this->ConnectParent('{79EE0412-8C96-09A7-4D33-FE0EDF753562}');
-
         //Timer
         $this->RegisterTimer('UpdateDuration', 0, 'TESLA_UpdateValues($_IPS[\'TARGET\']);');
 
